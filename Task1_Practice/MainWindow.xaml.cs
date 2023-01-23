@@ -46,5 +46,21 @@ namespace Task1_Practice
             win.Owner = this;
             win.ShowDialog();
         }
+
+        // Задание 3
+        private void Task3_Click(object sender, RoutedEventArgs e)
+        {
+            Task3 win = new Task3();
+            win.Owner = this;
+            win.ShowDialog();
+        }
+
+        // Задание 4
+        private void Task4_Click(object sender, RoutedEventArgs e)
+        {
+            Task4 win = new Task4();
+            win.Owner = this;
+            win.ShowDialog();
+        }
     }
 }

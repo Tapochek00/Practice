@@ -1,0 +1,59 @@
+﻿<Window x:Class="Task1_Practice.Task4"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Task1_Practice"
+        mc:Ignorable="d"
+        Title="Задание 4" Height="400" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Menu VerticalAlignment="Top" HorizontalAlignment="Left">
+            <MenuItem Header="Массив">
+                <MenuItem Header="Заполнить автоматически"/>
+                <MenuItem Header="Очистить"/>
+            </MenuItem>
+            <MenuItem Header="Решение" Click="Count_Click"/>
+            <MenuItem Header="Задание" Click="About_Click"/>
+            <MenuItem Header="Закрыть окно" Click="Exit_Click"/>
+        </Menu>
+
+        <StackPanel Margin="10, 30" Grid.Row="0">
+            <DataGrid x:Name="dataGrid_matr" Height="100" CellEditEnding="dataGrid_matr_CellEditEnding" HeadersVisibility="None"/>
+            <DataGrid x:Name="dataGrid_arr" Height="20" Margin="0, 10, 0, 0"  IsReadOnly="True" HeadersVisibility="None"/>
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Center" Grid.Row="1">
+            <StackPanel Orientation="Horizontal">
+                <GroupBox Header="Создать/очистить">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="10">
+                            <Label>Строки</Label>
+                            <TextBox x:Name="rows" Width="50" Height="20" MaxLength="4"/>
+                            <Label>Столбцы</Label>
+                            <TextBox x:Name="cols" Width="50" Height="20" MaxLength="4"/>
+                        </StackPanel>
+                        <Button x:Name="Create" Content="Создать" Padding="5" Margin="5, 0" Click="Create_Click"/>
+                        <Button x:Name="Clear" Content="Очистить" Padding="5" Margin="5" Click="Clear_Click"/>
+                    </StackPanel>
+                </GroupBox>
+                <GroupBox Header="Заполнить" Margin="10, 0, 0, 0">
+                    <StackPanel>
+                        <Label>Диапозон</Label>
+                        <StackPanel Orientation="Horizontal">
+                            <Label>От</Label>
+                            <TextBox x:Name="minNum" Width="50" Height="20" MaxLength="8"/>
+                            <Label>До</Label>
+                            <TextBox x:Name="maxNum" Width="50" Height="20" MaxLength="8"/>
+                        </StackPanel>
+                        <Button x:Name="Fill" Content="Заполнить" Padding="5" Margin="5" Click="Fill_Click"/>
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+            <Button x:Name="Count" Content="Решение" Padding="5" Margin="0, 5" Click="Count_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

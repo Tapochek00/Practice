@@ -29,7 +29,7 @@
         
         <Button x:Name="Task1" Grid.Row="1" Grid.Column="0" Content="Задание 1" Margin="15" Click="Task1_Click"/>
         <Button x:Name="Task2" Grid.Row="1" Grid.Column="1" Content="Задание 2" Margin="15" Click="Task2_Click"/>
-        <Button Grid.Row="2" Grid.Column="0" Content="Задание 3" Margin="15"/>
-        <Button Grid.Row="2" Grid.Column="1" Content="Задание 4" Margin="15"/>
+        <Button x:Name="Task3" Grid.Row="2" Grid.Column="0" Content="Задание 3" Margin="15" Click="Task3_Click"/>
+        <Button x:Name="Task4" Grid.Row="2" Grid.Column="1" Content="Задание 4" Margin="15" Click="Task4_Click"/>
     </Grid>
 </Window>

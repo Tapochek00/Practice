@@ -61,6 +61,13 @@
     <Compile Include="Task2.xaml.cs">
       <DependentUpon>Task2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Task3.xaml.cs">
+      <DependentUpon>Task3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Task4.xaml.cs">
+      <DependentUpon>Task4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VisualArray.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -78,6 +85,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Task2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Task3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Task4.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

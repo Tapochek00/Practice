@@ -49,5 +49,40 @@ namespace PracticeLib
 
             return sum;
         }
+
+        /// <summary>
+        /// Находит номер первого нечётного элемента
+        /// </summary>
+        /// <param name="arr">Массив целых чисел</param>
+        /// <returns>Номер первого нечётного элемента. Если его нет, возвращает -1</returns>
+        public static int FirstOddElement(int[] arr)
+        {
+            int index = -1;
+
+            for(int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] % 2 != 0)
+                {
+                    index = i;
+                    break;
+                }
+            }
+
+            return index;
+        }
+
+        /// <summary>
+        /// Формирует одномерный массив из сумм элементов столбцов матрицы
+        /// </summary>
+        /// <param name="matr">Матрица</param>
+        /// <returns>Массив</returns>
+        public static int[] ColumnsSum(int[,] matr)
+        {
+            int[] arr = new int[matr.GetLength(1)];
+
+            for(int j = 0; j < matr.GetLength(1); j++)
+                for(int i = 0; i < matr.GetLength(0); i++) arr[j] += matr[i, j];
+            return arr;
+        }
     }
 }
