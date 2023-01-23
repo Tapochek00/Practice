@@ -21,7 +21,7 @@ namespace PracticeLib
             while (number >= 1)
             {
                 digit = number % 10;
-                number = number / 10;
+                number /= 10;
 
                 if (digit % 2 != 0)
                 {
